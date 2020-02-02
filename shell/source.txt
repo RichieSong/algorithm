@@ -1,0 +1,97 @@
+bizaccount_cbiz_endday
+ cbiz-endday-dev1.qianbaocard.com
+ cbiz-endday-dev2.qianbaocard.com
+ cbiz-endday-dev3.qianbaocard.com
+ cbiz-endday-dev4.qianbaocard.com
+ cbiz-endday-dev5.qianbaocard.com
+ cbiz-endday-dev6.qianbaocard.com
+ cbiz-endday-sit1.qianbaocard.com
+ cbiz-endday-sit2.qianbaocard.com
+ cbiz-endday-sit3.qianbaocard.com
+ cbiz-endday-sit4.qianbaocard.com
+ cbiz-endday-sit5.qianbaocard.com
+ cbiz-endday-sit6.qianbaocard.com
+
+bizaccount_biz_endday
+ biz-endday-dev1.qianbaocard.com
+ biz-endday-dev2.qianbaocard.com
+ biz-endday-dev3.qianbaocard.com
+ biz-endday-dev4.qianbaocard.com
+ biz-endday-dev5.qianbaocard.com
+ biz-endday-dev6.qianbaocard.com
+ biz-endday-sit1.qianbaocard.com
+ biz-endday-sit2.qianbaocard.com
+ biz-endday-sit3.qianbaocard.com
+ biz-endday-sit4.qianbaocard.com
+ biz-endday-sit5.qianbaocard.com
+ biz-endday-sit6.qianbaocard.com
+
+bizaccount_cbiz_quartz_job
+ cbiz-quartz-dev1.qianbaocard.com
+ cbiz-quartz-dev2.qianbaocard.com
+ cbiz-quartz-dev3.qianbaocard.com
+ cbiz-quartz-dev4.qianbaocard.com
+ cbiz-quartz-dev5.qianbaocard.com
+ cbiz-quartz-dev6.qianbaocard.com
+ cbiz-quartz-sit1.qianbaocard.com
+ cbiz-quartz-sit2.qianbaocard.com
+ cbiz-quartz-sit3.qianbaocard.com
+ cbiz-quartz-sit4.qianbaocard.com
+ cbiz-quartz-sit5.qianbaocard.com
+ cbiz-quartz-sit6.qianbaocard.com
+
+biz_quartz_job
+ biz-quartz-dev1.qianbaocard.com
+ biz-quartz-dev2.qianbaocard.com
+ biz-quartz-dev3.qianbaocard.com
+ biz-quartz-dev4.qianbaocard.com
+ biz-quartz-dev5.qianbaocard.com
+ biz-quartz-dev6.qianbaocard.com
+ biz-quartz-sit1.qianbaocard.com
+ biz-quartz-sit2.qianbaocard.com
+ biz-quartz-sit3.qianbaocard.com
+ biz-quartz-sit4.qianbaocard.com
+ biz-quartz-sit5.qianbaocard.com
+ biz-quartz-sit6.qianbaocard.com
+
+bizaccount_interface
+ bizapi-dev1.qianbaocard.com
+ bizapi-dev2.qianbaocard.com
+ bizapi-dev3.qianbaocard.com
+ bizapi-dev4.qianbaocard.com
+ bizapi-dev5.qianbaocard.com
+ bizapi-dev6.qianbaocard.com
+ bizapi-sit1.qianbaocard.com
+ bizapi-sit2.qianbaocard.com
+ bizapi-sit3.qianbaocard.com
+ bizapi-sit4.qianbaocard.com
+ bizapi-sit5.qianbaocard.com
+ bizapi-sit6.qianbaocard.com
+
+qbauth_qbcard_auth
+ pms.qianbaocard.com
+ pms-dev2.qianbaocard.com
+ pms-dev3.qianbaocard.com
+ pms-dev4.qianbaocard.com
+ pms-dev5.qianbaocard.com
+ pms-dev6.qianbaocard.com
+ pms-sit1.qianbaocard.com
+ pms-sit2.qianbaocard.com
+ pms-sit3.qianbaocard.com
+ pms-sit4.qianbaocard.com
+ pms-sit5.qianbaocard.com
+ pms-sit6.qianbaocard.com
+
+sharding_admin_sfzf
+sharding-admin-sfzf-dev1.qianbaocard.com
+sharding-admin-sfzf-dev2.qianbaocard.com
+sharding-admin-sfzf-dev3.qianbaocard.com
+sharding-admin-sfzf-dev4.qianbaocard.com
+sharding-admin-sfzf-dev5.qianbaocard.com
+sharding-admin-sfzf-dev6.qianbaocard.com
+sharding-admin-sfzf-sit1.qianbaocard.com
+sharding-admin-sfzf-sit2.qianbaocard.com
+sharding-admin-sfzf-sit3.qianbaocard.com
+sharding-admin-sfzf-sit4.qianbaocard.com
+sharding-admin-sfzf-sit5.qianbaocard.com
+sharding-admin-sfzf-sit6.qianbaocard.com
