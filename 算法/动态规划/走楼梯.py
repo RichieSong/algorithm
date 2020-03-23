@@ -56,3 +56,6 @@ if __name__ == '__main__':
     tt = timeit('climbStairs1(135)', 'from __main__ import climbStairs1', number=1000)
     print(t)
     print(tt)
+
+
+dp[i] = max(dp[i]+arr[i],dp[i])

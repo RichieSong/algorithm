@@ -31,7 +31,7 @@ class Solution:
         :param right: 用完 ）的次数
         :param n:
         :param result:
-        :return: 剪枝思想  一直想不明白。。。
+        :return: 剪枝思想
         '''
         if left == n and right == n:  # 左括号和右括号都用完即结束条件
             self.list.append(result)
@@ -41,7 +41,20 @@ class Solution:
         if left > right and right < n:  # 右括号没用完并且右括号必须比左括号少
             self._gen(left, right + 1, n, result + ")")
 
+    def generateParenthesis1(self, n):
+        self.res = []
+        self.gen(0,0,n,"")
+        return self.res
+
+
+    def gen(self, left, right, n, result):
+        if left == n and right == n:
+            self.res.append(result)
+
+        if left < n: self.gen(left + 1, right, n, result + "(")
+        if right < left: self.gen(left, right + 1, n, result + ")")
+
 
 if __name__ == '__main__':
     s = Solution()
-    print(s.generateParenthesis(3))
+    print(s.generateParenthesis1(3))

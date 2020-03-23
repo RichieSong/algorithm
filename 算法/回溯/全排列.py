@@ -19,6 +19,7 @@ class Solution:
         """
         :type nums: List[int]
         :rtype: List[List[int]]
+        回溯
         """
 
         def backtrack(first=0):
