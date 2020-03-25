@@ -5,8 +5,8 @@ def merge_sort(arr):
         return arr
     mid = len(arr) >> 1
     left, right = merge_sort(arr[:mid]), merge_sort(arr[mid:])
-    print(left,right)
-    return merge(left, right, arr.copy())
+    # print(left,right)
+    return merge1(left, right, arr[:])
 
 
 def merge(left, right, merged):
@@ -25,6 +25,23 @@ def merge(left, right, merged):
         merged[left_cur + right_cur] = right[right_cur]
     return merged
 
+
+def merge1(left, right, merged):
+    left_cur, right_cur = 0, 0
+    while left_cur < len(left) and right_cur < len(right):
+        if left[left_cur] < right[right_cur]:
+            merged[left_cur + right_cur] = left[left_cur]
+            left_cur += 1
+        else:
+            merged[left_cur + right_cur] = right[right_cur]
+            right_cur += 1
+    for i in range(left_cur, len(left)):
+        merged[i + right_cur] = left[i]
+    for i in range(right_cur, len(right)):
+        merged[i + left_cur] = right[i]
+    return merged
+
+
 if __name__ == '__main__':
     arr = [3, 2, 4, 1, 6, 7, 9, 8, 5]
-    print(merge_sort(arr)) # 归并排序
+    print merge_sort(arr)  # 归并排序

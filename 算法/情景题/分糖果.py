@@ -16,4 +16,15 @@ dp[i] = max(dp[i-2]+array[i],dp[i-1])
 
 
 
+def f(nums):
+    if not nums:return 0
+    if len(nums)<=2:return max(nums)
+    dp = [0]*len(nums)
+    for i in range(len(nums)):
+        dp[i] = max(dp[i - 2] + nums[i], dp[i - 1])
+        print dp
 
+
+if __name__ == '__main__':
+    nums = []
+    print f(nums)

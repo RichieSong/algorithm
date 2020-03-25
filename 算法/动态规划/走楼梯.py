@@ -58,4 +58,3 @@ if __name__ == '__main__':
     print(tt)
 
 
-dp[i] = max(dp[i]+arr[i],dp[i])

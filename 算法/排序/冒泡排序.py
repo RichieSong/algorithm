@@ -6,13 +6,10 @@
 
 def bufferpool(array):
     lenth = len(array)
-    haschange = True
     for i in range(lenth - 1):
-        haschange = False
         for j in range(lenth - 1 - i):
             if array[j] > array[j + 1]:
                 array[j + 1], array[j] = array[j], array[j + 1]
-                haschange = True
     print array
 
 

@@ -24,6 +24,10 @@ def twoSum(nums, target):
     return res
 
 
+def twoSum1(nums, target):
+    """位运算"""
+    pass
+
 if __name__ == '__main__':
     nums = [2, 7, 11, 15]
     print twoSum(nums, 9)
