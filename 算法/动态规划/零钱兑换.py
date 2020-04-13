@@ -35,16 +35,31 @@ class Solution(object):
                 if j <= i:  # 判断能否构成兑换条件，只要总额比面值大就可以
                     dp[i] = min(dp[i], dp[i - j] + 1)
                     print(str(i) + " * " + str(j) + " = " + str(dp))
-        return -1 if dp[amount] > amount else dp[amount]  # dp[amount]就是结果
+        return -1 if dp[amount] != float('inf') else dp[amount]  # dp[amount]就是结果
 
     def test(self, coins, amount):
         dp = [float('inf')] * (amount + 1)
-        dp[0]=0
+        dp[0] = 0
         for i in range(1, amount + 1):
             for j in coins:
                 if i >= j:
                     dp[i] = min(dp[i], dp[i - j] + 1)
-        return dp[amount] if dp[amount] < amount else -1
+        return dp[amount] if dp[amount] != float('inf') else -1
+
+
+class Solution1:
+    def coinChange(self):
+        """
+        float('inf') 代表无穷大
+
+        :return:
+        """
+        dp = [float('inf')] * (amount + 1)
+        dp[0] = 0
+        for coin in coins:
+            for x in range(coin, amount + 1):
+                dp[x] = min(dp[x], dp[x - coin] + 1)
+        return dp[amount] if dp[amount] != float('inf') else -1
 
 
 if __name__ == '__main__':

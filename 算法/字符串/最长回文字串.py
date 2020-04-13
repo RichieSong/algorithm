@@ -48,6 +48,7 @@ class Solution(object):
 
     # 这个好理解
     def test1(self, s):
+        """输出字符串"""
         if not s: return ""
         res = s[0]
         for i in range(len(s)):
@@ -56,7 +57,22 @@ class Solution(object):
                     res = s[i:j + 1] if len(s[i:j + 1]) > len(res) else res
         return res
 
+    def test2(self, s):
+        """输出数字"""
+        if not s: return 0
+        n = len(s)
+        dp = [[0 for _ in range(n)] for _ in range(n)]
+        for i in range(n - 1, -1, -1):
+            dp[i][i] = 1
+            for j in range(i + 1, n):
+                if s[i] == s[j]:
+                    dp[i][j] = dp[i + 1][j - 1] + 2
+                else:
+                    dp[i][j] = max(dp[i + 1][j], dp[i][j - 1])
+        return dp[0][n-1]
+
 
 if __name__ == '__main__':
     s = Solution()
     print(s.test1("aabbcbba"))
+    print(s.test2("aabbcbba"))

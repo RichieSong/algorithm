@@ -67,36 +67,18 @@ class Solution(object):
             while slow != fast:
                 slow = nums[slow]
                 fast = nums[nums[fast]]
-                print(slow, fast)
             fast = 0
             while slow != fast:
                 fast = nums[fast]
                 slow = nums[slow]
-                print("===", slow, fast)
             return slow
         return -1
 
-    def findDuplicate2(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        二分法:  ?????有误 改天在做
-        """
-        left, right = 0, len(nums) - 1
-        while left <= right:
-            mid = left + (right - left) >> 1
-            count = 0
-            for i in range(len(nums)):
-                if nums[i] <= mid:
-                    count += 1
-                if count > mid:
-                    right = mid - 1
-                else:
-                    left = mid + 1
-        return left
+
 
 
 if __name__ == '__main__':
     s = Solution()
     nums = [1, 3, 4, 2, 2]
-    print(s.findDuplicate2(nums))
+    print(s.findDuplicate(nums))
+    print(s.findDuplicate1(nums))

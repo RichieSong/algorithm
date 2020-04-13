@@ -22,9 +22,9 @@ def f(nums):
     dp = [0]*len(nums)
     for i in range(len(nums)):
         dp[i] = max(dp[i - 2] + nums[i], dp[i - 1])
-        print dp
+    return dp[-1]
 
 
 if __name__ == '__main__':
-    nums = []
+    nums = [3,2,1,2,3]
     print f(nums)

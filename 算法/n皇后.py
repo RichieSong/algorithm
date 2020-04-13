@@ -33,19 +33,25 @@ class Solution:
         :rtype: List[List[str]]
         难度 *****
         """
-        def DFS(queues, xy_dif, xy_sum):
+
+        def DFS(queues, xy_dif, xy_sum):  # xy_dif xy_sum 对角线
+            print queues, xy_dif, xy_sum
             p = len(queues)
-            if p == n:
+            if p == n:  # 代表已经放满了
                 result.append(queues)
                 return
-            for q in range(n):
+            for q in range(n):  # q==col
                 if q not in queues and p - q not in xy_dif and p + q not in xy_sum:
                     DFS(queues + [q], xy_dif + [p - q], xy_sum + [p + q])
 
         result = []
+
         DFS([], [], [])
+        # return result
+        print result
         return [["." * i + "Q" + "." * (n - i - 1) for i in sol] for sol in result]
 
+
 if __name__ == '__main__':
-    s=Solution()
+    s = Solution()
     print(s.solveNQueens(4))

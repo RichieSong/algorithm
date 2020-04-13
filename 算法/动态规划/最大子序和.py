@@ -40,20 +40,26 @@ class Solution(object):
             res = max(res, endHere)
         return res
 
-    def test(self,nums):
+    def test(self, nums):
         end = nums[0]
         res = nums[0]
-        for i in range(1,len(nums)):
-            end = max(end+nums[i],nums[i]) #-1 2 12 8 15 17 12
-            res = max(end,res) #1 2 12 12 15 17 17
-            print(end,res)
+        for i in range(1, len(nums)):
+            end = max(end + nums[i], nums[i])  # -1 2 12 8 15 17 12
+            res = max(end, res)  # 1 2 12 12 15 17 17
         return res
 
+    def test1(self, nums):
+        tmp, res = 0, 0
+        for i in range(len(nums)):
+            tmp = max(nums[i] + tmp, nums[i])
+            res = max(tmp, res)
+        return res
 
 
 if __name__ == '__main__':
     s = Solution()
-    nums = [1, -2, 3, 10, -4, 7, 2, -5]
+    nums = [1, -2, 3, 10, -4, 7, 2, -5,23]
     print(s.maxSubArray(nums))
     print(s.maxSubArray1(nums))
     print(s.test(nums))
+    print(s.test1(nums))

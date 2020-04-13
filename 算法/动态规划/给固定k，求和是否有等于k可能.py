@@ -8,6 +8,8 @@ k=24
 dp 动态规划
 https://www.youtube.com/watch?v=Jakbj4vaIbE
 选或不选
+选：dp[i]= dp[i-1]+arr[i]
+不选：dp[i]=dp[i-1]
 
 '''
 
@@ -54,14 +56,14 @@ def dp_subset(arr, k):
 
 
 arr = [2, 3, 1, 4, 5, 6, 4, 3]
-print(rec_subset(arr, len(arr) - 1, 40))
-print(rec_subset(arr, len(arr) - 1, 38))
-print(rec_subset(arr, len(arr) - 1, 34))
-print(rec_subset(arr, len(arr) - 1, 30))
-print(rec_subset(arr, len(arr) - 1, 28))
+# print(rec_subset(arr, len(arr) - 1, 40))
+# print(rec_subset(arr, len(arr) - 1, 38))
+# print(rec_subset(arr, len(arr) - 1, 34))
+# print(rec_subset(arr, len(arr) - 1, 30))
+# print(rec_subset(arr, len(arr) - 1, 28))
 print("################")
-print(dp_subset(arr, 40))
-print(dp_subset(arr, 38))
-print(dp_subset(arr, 34))
-print(dp_subset(arr, 30))
 print(dp_subset(arr, 28))
+# print(dp_subset(arr, 38))
+# print(dp_subset(arr, 34))
+# print(dp_subset(arr, 30))
+# print(dp_subset(arr, 28))

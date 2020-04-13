@@ -30,7 +30,7 @@ class Solution(object):
         """
         row, col = len(grid), len(grid[0])
         # dp = np.zeros((row, col), dtype=int)
-        dp = [[0] * col] * row
+        dp = [[0] * col] * row  # 有问题 不要这样用
         for i in range(row):
             for j in range(col):
                 if i == 0:

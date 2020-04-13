@@ -47,6 +47,7 @@ if __name__ == '__main__':
         [6, 5, 7],  # i=1  j = 0
         [4, 1, 8, 3]
     ]
+
     s = Solution()
     r = s.test(t)
     rr= s.minimumTotal(t)

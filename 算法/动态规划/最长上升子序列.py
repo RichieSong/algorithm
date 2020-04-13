@@ -52,6 +52,6 @@ class Solution(object):
 
 if __name__ == '__main__':
     s = Solution()
-    nums = [2,2]
+    nums = [1,2,3,2]
     print(s.lengthOfLIS(nums))
     print(s.lengthOfLIS1(nums))

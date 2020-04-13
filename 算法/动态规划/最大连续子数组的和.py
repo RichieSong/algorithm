@@ -10,7 +10,7 @@
 
 def MaxSubArray(array):
     currSum = 0
-    maxSum = array[0]
+    maxSum = 0
     for i in range(len(array)):
         currSum = array[i] if array[i] > currSum + array[i] else currSum + array[i]
         maxSum = max(maxSum, currSum)

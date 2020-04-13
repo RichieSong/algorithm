@@ -52,4 +52,4 @@ class Solution(object):
 
 if __name__ == '__main__':
     s = Solution()
-    print s.myPow(2, -10)
+    print(s.myPow(2, -10))

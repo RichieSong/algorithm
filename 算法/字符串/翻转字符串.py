@@ -55,6 +55,7 @@ class Solution:
         return s
 
 
+
 if __name__ == '__main__':
     s = Solution()
     nums = [1, 6, 4, 9]

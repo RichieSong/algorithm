@@ -21,6 +21,6 @@ def dp_sum(arr):
         dp[i] = max(dp[i - 2] + arr[i], dp[i - 1])
     return dp[-1]
 
-
+# dp[i] = max(dp[i-2]+arr[i],dp[i-1])
 arr = [1, 2, 3, 4, 5, 43, 2]
 print(dp_sum(arr))
