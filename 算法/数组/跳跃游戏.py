@@ -34,6 +34,7 @@ class Solution(object):
         return end == 0
 
 
+
 if __name__ == '__main__':
     S = Solution()
     nums = [3, 2, 1, 0, 4]

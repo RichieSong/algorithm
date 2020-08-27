@@ -43,5 +43,4 @@ class Solution(object):
 if __name__ == '__main__':
     s = Solution()
     nums = [2, 3, 1, 1, 4]
-    print
-    s.jump(nums)
+    print(s.jump(nums))

@@ -93,7 +93,7 @@ class Solution(object):
 
 if __name__ == '__main__':
     s = Solution()
-    str = "abdsfsdfb"
+    str = "abcbdefhgdgdfg"
     print(s.lengthOfLongestSubstring(str))
     # print(s.lengthOfLongestSubstring1(str))
     print(s.lengthOfLongestSubstring2(str))

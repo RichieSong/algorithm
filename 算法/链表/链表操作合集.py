@@ -39,8 +39,8 @@ class Solution(object):
         """
         pre, pre.next = self, head
         while pre.next and pre.next.next:
-            a = pre.next  # 2
-            b = a.next  # 3
+            a = pre.next  # 1
+            b = a.next  # 2
             pre.next, b.next, a.next = b, a, b.next
             pre = a
         return self.next
