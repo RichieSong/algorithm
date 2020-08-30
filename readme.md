@@ -243,7 +243,7 @@ def BFS(graph, start, end):
 # Python
 left, right = 0, len(array) - 1 
 while left <= right: 
-	  mid = (left + right) / 2 
+	  mid = (left + (right - left)) >> 1 # 方式数据溢出
 	  if array[mid] == target: 
 		    # find the target!! 
 		    break or return result 
@@ -252,6 +252,11 @@ while left <= right:
 	  else: 
 		    right = mid - 1
 
-使用二分查找，寻找一个半有序数组 [4, 5, 6, 7, 0, 1, 2] 中间无序的地方
-说明：同学们可以将自己的思路、代码写在学习总结中
+```
+
+### 动态规划: 也没那么神秘,无非就是所有的情况遍历一遍,找出最优解.核心点就是找规律
+```
+难点1:如何找出动态方程dp?
+
+
 ```
