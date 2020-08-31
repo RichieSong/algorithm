@@ -78,12 +78,13 @@ class Solution(object):
         :type m: int
         :type n: int
         :rtype: int
+        一维数组
         """
         cur = [1] * n
         for raw in range(1, m):
             for col in range(1, n):
                 cur[col] += cur[col - 1]
-
+                print(cur)
         return cur[-1]
 
 

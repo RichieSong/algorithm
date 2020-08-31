@@ -77,4 +77,4 @@ if __name__ == '__main__':
     text1 = "abcde"
     text2 = "dc"
     s = Solution()
-    print s.longestCommonSubsequence(text1, text2)
+    print(s.longestCommonSubsequence(text1, text2))
