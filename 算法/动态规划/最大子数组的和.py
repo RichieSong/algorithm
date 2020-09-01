@@ -17,5 +17,15 @@ def MaxSubArray(array):
     return maxSum
 
 
+
+def MaxSubArray1(array):
+    l = len(array)
+    dp = [0] * l
+    for i in range(l):
+        dp[i] = max(dp[i - 1] + array[i], dp[i])
+    return max(dp)
+
+
 a = [1, -2, 3, 10, -4, 7, 2, -5]
 print(MaxSubArray(a))
+print(MaxSubArray1(a))
