@@ -11,7 +11,6 @@ while l <= r:
         nums.remove(tmp)
         nums.insert(r, tmp)
         r -= 1
-print nums
 
 
 class Solution(object):
@@ -24,7 +23,7 @@ class Solution(object):
             return 0
         # 两个指针i和j
         j = 0
-        for i in xrange(len(nums)):
+        for i in range(len(nums)):
             # 当前元素!=0，就把其交换到左边，等于0的交换到右边
             if nums[i]:
                 nums[j], nums[i] = nums[i], nums[j]

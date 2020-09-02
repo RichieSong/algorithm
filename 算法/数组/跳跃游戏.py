@@ -34,9 +34,8 @@ class Solution(object):
         return end == 0
 
 
-
 if __name__ == '__main__':
     S = Solution()
     nums = [3, 2, 1, 0, 4]
-    print
-    S.canJump(nums)
+    print(
+        S.canJump(nums))
