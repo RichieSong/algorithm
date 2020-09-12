@@ -28,3 +28,9 @@ class Solution(object):
             if nums[i]:
                 nums[j], nums[i] = nums[i], nums[j]
                 j += 1
+        return nums
+
+if __name__ == '__main__':
+    s = Solution()
+    nums = [9,4,0,3,0,5,2,0]
+    print(s.moveZeroes(nums))

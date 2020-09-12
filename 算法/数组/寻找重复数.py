@@ -75,10 +75,34 @@ class Solution(object):
         return -1
 
 
+class Solution1:
+    def findRepeatNumber(self, nums: [int]) -> int:
+        i = 0
+        while i < len(nums):
+            if nums[i] == i:
+                i += 1
+                continue
+            if nums[nums[i]] == nums[i]: return nums[i]
+            nums[nums[i]], nums[i] = nums[i], nums[nums[i]]
+        return -1
+
+    def findRepeatNumber1(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        i = 0
+        while i < len(nums):
+            if nums[i] == i:
+                i += 1
+                continue
+            if nums[nums[i]] == nums[i]: return nums[i]
+            nums[nums[i]], nums[i] = nums[i], nums[nums[i]]
+        return -1
 
 
 if __name__ == '__main__':
     s = Solution()
-    nums = [1, 3, 4, 2, 2]
+    nums = [2, 3, 1, 0, 2, 5, 3]
     print(s.findDuplicate(nums))
     print(s.findDuplicate1(nums))

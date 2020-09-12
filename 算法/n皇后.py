@@ -35,7 +35,6 @@ class Solution:
         """
 
         def DFS(queues, xy_dif, xy_sum):  # xy_dif xy_sum 对角线
-            print queues, xy_dif, xy_sum
             p = len(queues)
             if p == n:  # 代表已经放满了
                 result.append(queues)
@@ -47,8 +46,8 @@ class Solution:
         result = []
 
         DFS([], [], [])
+        print(result)
         # return result
-        print result
         return [["." * i + "Q" + "." * (n - i - 1) for i in sol] for sol in result]
 
 

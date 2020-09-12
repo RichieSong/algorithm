@@ -135,7 +135,7 @@ def recursion(level, param1, param2, ...):
 ```
 回溯的本质也是递归，只不过试探不同的路径，直到找到符合要求的路径
 def backtrack(nums(选择列表),track(路径)):
-    # 终止掉价
+    # 终止条件
     if len(nums)==len(track):
         res.append(track[:]) # 因为track是引用，所有将副本结果保存
     # 去掉不合法的结果，也就是提前剪枝

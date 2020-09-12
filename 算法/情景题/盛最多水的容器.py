@@ -28,4 +28,4 @@ def f(nums):
 
 if __name__ == '__main__':
     nums = [1, 8, 6, 2, 5, 4, 8, 3, 7]
-    print f(nums)
+    print(nums)
