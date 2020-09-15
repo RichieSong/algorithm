@@ -78,11 +78,11 @@ class Solution:
             # 1、如果下标超了，并且window下标也超了 ，删除下标
             # 2、将当前元素x与下标为window[-1]的元素对比，如果x大，则剔除，同时将x下标添加window中
             # 3、当i+1 >=k时，将最大元素添加res
-            if i >= k and window[0] <= i - k:  # 1
+            if i >= k and window[0] <= i - k:  #这边有两点window窗口剔除元素,1-元素过期 2-window下标也超了
                 window.popleft()
-            while window and nums[window[-1]] <= x:  # 2
+            while window and nums[window[-1]] <= x:  # 保证window第一个下标的值永远是最大的
                 window.pop()
             window.append(i)
-            if i >= k - 1:  # 3
+            if i >= k - 1:  # 当超过window下标的时候,此时可以存储最大值了
                 res.append(nums[window[0]])
         return res
