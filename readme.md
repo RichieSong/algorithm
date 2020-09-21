@@ -260,3 +260,88 @@ while left <= right:
 
 
 ```
+
+### 网格DFS模板,一般解决二维问题,如岛屿
+
+```
+void dfs(int[][] grid, int r, int c) {
+    // 判断基础条件
+    // 如果坐标 (r, c) 超出了网格范围，直接返回
+    if (!inArea(grid, r, c)) {
+        return;
+    }
+    // 访问上、下、左、右四个相邻结点
+    dfs(grid, r - 1, c);
+    dfs(grid, r + 1, c);
+    dfs(grid, r, c - 1);
+    dfs(grid, r, c + 1);
+}
+
+// 判断坐标 (r, c) 是否在网格中
+boolean inArea(int[][] grid, int r, int c) {
+    return 0 <= r && r < grid.length 
+        	&& 0 <= c && c < grid[0].length;
+}
+
+```
+
+### 并查集代码模板
+
+```
+# Python 
+def init(p): 
+	# for i = 0 .. n: p[i] = i; 
+	p = [i for i in range(n)] 
+ 
+def union(self, p, i, j): 
+	p1 = self.parent(p, i) 
+	p2 = self.parent(p, j) 
+	p[p1] = p2 
+ 
+def parent(self, p, i): 
+	root = i 
+	while p[root] != root: 
+		root = p[root] 
+	while p[i] != i: # 路径压缩 ?
+		x = i; i = p[i]; p[x] = root 
+	return root
+	
+```
+
+### 字典树 
+- 应用:用于统计和排序大量的字符串,搜索引擎中文本词频统计
+- 优势:最大限度的减少无谓的字符串比较,查询效率比哈希表高
+
+[字典树代码模板链接](https://shimo.im/docs/DP53Y6rOwN8MTCQH/read)
+
+```
+python实现字典树
+class Trie(object):
+  
+	def __init__(self): 
+		self.root = {} 
+		self.end_of_word = "#" 
+ 
+	def insert(self, word): 
+		node = self.root 
+		for char in word: 
+			node = node.setdefault(char, {}) 
+		node[self.end_of_word] = self.end_of_word 
+ 
+	def search(self, word): 
+		node = self.root 
+		for char in word: 
+			if char not in node: 
+				return False 
+			node = node[char] 
+		return self.end_of_word in node 
+ 
+	def startsWith(self, prefix): 
+		node = self.root 
+		for char in prefix: 
+			if char not in node: 
+				return False 
+			node = node[char] 
+		return True
+		
+```
