@@ -50,7 +50,8 @@ class Solution:
         res = []
         dic = Counter(nums)
         max_heap = [(-val, key) for key, val in dic.items()]  # 为堆化作准备
-        heapq.heapify(max_heap)  # 堆化
+        print(max_heap)
+        heapq.heapify(max_heap)  # 堆化,默认是大顶堆，堆顶元素最小，
         for i in range(k):
             res.append(heapq.heappop(max_heap)[1])
         return res
